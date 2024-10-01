@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ff7f27;
+    margin: 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.logo {
+    display: flex;
+    margin: 10px auto 20px auto;
+    width: 40vw;
+}
+
+.piano {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+/*
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+*/
+.key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+}
+
+.white {
+    --width: 8vw;
+    background: white;
+    border: 1px solid #333;
+}
+
+.white.active {
+    background-color: #fde293;
+}
+
+.black {
+    --width: 4.7vw;
+    background: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+}
+
+.black.active {
+    background-color: #333;
+}
+
+.message {
+    display: block;
+    margin: auto;
+    color: white;
+    font-family: sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+    .logo {
+    width: 45vw;
+    }
+}
